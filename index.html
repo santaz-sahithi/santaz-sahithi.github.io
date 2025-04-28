@@ -1,117 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0; /* Reset default body margin */
-        }
-
-        .container {
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for better visibility */
-        }
-
-        h1 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        #countdown {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #007bff; /* Highlight the countdown */
-            margin-bottom: 20px;
-        }
-
-        /* Optional: Add some styling for a progress bar */
-        #progress-bar {
-            width: 80%;
-            height: 10px;
-            background-color: #ddd;
-            margin: 0 auto;
-            border-radius: 5px;
-            position: relative; /* Make it a positioning context for the filled part */
-            margin-bottom: 20px;
-        }
-
-        #progress-bar-fill {
-            height: 10px;
-            background-color: #007bff;
-            border-radius: 5px;
-            width: 0%; /* Start with 0% */
-            transition: width 0.5s ease; /* Smooth transition */
-        }
-
-        .contact-info {
-            font-size: 0.9rem;
-            color: #777;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Under Construction</h1>
-        <p>This website is currently under development. Please check back later.</p>
-        <div id="countdown">Coming Soon!</div>
-        <div id="progress-bar">
-            <div id="progress-bar-fill"></div>
-        </div>
-        <p class="contact-info">
-            For inquiries, please contact: <a href="mailto:santazsahithi@gmail.com">santazsahithi@gmail.com
-            </a>
-        </p>
-    </div>
-
-    <script>
-        // Optional: Countdown timer (replace with your desired date)
-        const targetDate = new Date("2025-05-15T00:00:00"); // Example: December 31, 2025
-        const countdownElement = document.getElementById("countdown");
-        const progressBarFill = document.getElementById("progress-bar-fill");
-
-        function updateCountdown() {
-            const now = new Date();
-            const difference = targetDate.getTime() - now.getTime();
-
-            if (difference > 0) {
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                countdownElement.textContent = `Coming in ${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-                // Optional: Update progress bar
-                const totalDays = (targetDate.getTime() - new Date("2025-03-01").getTime()) / (1000 * 60 * 60 * 24); //Rough estimate
-                const daysPassed = (new Date().getTime() - new Date("2025-03-01").getTime()) / (1000 * 60 * 60 * 24);
-                const progress = Math.min(100, (daysPassed / totalDays) * 100); // Cap at 100%
-                progressBarFill.style.width = `${progress}%`;
-            } else {
-                countdownElement.textContent = "Website is Live!"; // Or any other message
-                progressBarFill.style.width = `100%`;
-            }
-        }
-
-        updateCountdown(); // Initial update
-        setInterval(updateCountdown, 1000); // Update every second
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <script type="module" crossorigin src="/assets/index-DJ9MkzO-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CJwI1kdU.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
